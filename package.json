@@ -1,0 +1,33 @@
+{
+    "name": "tx-lang",
+    "displayName": "tx",
+    "description": "Syntax highlighting for Tx.js",
+    "version": "0.0.1",
+    "publisher": "Attila Nedermann",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Language Packs",
+        "Extension Packs"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "tx",
+            "aliases": ["Tx", "tx","Txjs", "Transplant", "Transplant.js"],
+            "extensions": [".tx"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "tx",
+            "scopeName": "source.tx",
+            "path": "./syntaxes/tx.tmLanguage.json"
+        }]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ati-n/syn-tx.js"
+      }
+}
