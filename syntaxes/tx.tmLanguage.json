@@ -134,7 +134,7 @@
 							"name": "keyword.control.flow.tx"
 						}
 					},
-					"end": "(?=[;}]|$|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))",
+					"end": "(?=[;}]|$|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|bool|big|sym|obj|def|any)\\b))",
 					"patterns": [
 						{
 							"include": "#expression"
@@ -298,11 +298,11 @@
 			"patterns": [
 				{
 					"name": "meta.var.expr.tx",
-					"begin": "(?=(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(\\bexport)\\s+)?(?:(\\bdeclare)\\s+)?\\b(var|let|int|double|string|bool|sym|obj|def|any)(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.)))",
-					"end": "(?!(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(\\bexport)\\s+)?(?:(\\bdeclare)\\s+)?\\b(var|let|int|double|string|bool|sym|obj|def|any)(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.)))((?=;|}|((?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(of|in)\\s+)|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))|((?<!^let|[^\\._$[:alnum:]]let|^var|[^\\._$[:alnum:]]var)(?=\\s*$)))",
+					"begin": "(?=(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(\\bexport)\\s+)?(?:(\\bdeclare)\\s+)?\\b(var|let|int|double|str|big|bool|sym|obj|def|any)(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.)))",
+					"end": "(?!(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(\\bexport)\\s+)?(?:(\\bdeclare)\\s+)?\\b(var|let|int|double|str|big|bool|sym|obj|def|any)(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.)))((?=;|}|((?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(of|in)\\s+)|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b))|((?<!^let|[^\\._$[:alnum:]]let|^var|[^\\._$[:alnum:]]var)(?=\\s*$)))",
 					"patterns": [
 						{
-							"begin": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(\\bexport)\\s+)?(?:(\\bdeclare)\\s+)?\\b(var|let|int|double|string|bool|sym|obj|def|any)(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.))\\s*",
+							"begin": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(\\bexport)\\s+)?(?:(\\bdeclare)\\s+)?\\b(var|let|int|double|str|big|bool|sym|obj|def|any)(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.))\\s*",
 							"beginCaptures": {
 								"1": {
 									"name": "keyword.control.export.tx"
@@ -373,7 +373,7 @@
 							"name": "storage.type.tx"
 						}
 					},
-					"end": "(?!(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(\\bexport)\\s+)?(?:(\\bdeclare)\\s+)?\\b(const(?!\\s+enum\\b))(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.)))((?=;|}|((?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(of|in)\\s+)|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))|((?<!^const|[^\\._$[:alnum:]]const)(?=\\s*$)))",
+					"end": "(?!(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(\\bexport)\\s+)?(?:(\\bdeclare)\\s+)?\\b(const(?!\\s+enum\\b))(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.)))((?=;|}|((?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(of|in)\\s+)|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b))|((?<!^const|[^\\._$[:alnum:]]const)(?=\\s*$)))",
 					"patterns": [
 						{
 							"begin": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(?:(\\bexport)\\s+)?(?:(\\bdeclare)\\s+)?\\b(const(?!\\s+enum\\b))(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.))\\s*",
@@ -1203,7 +1203,7 @@
 					"name": "meta.definition.function.tx entity.name.function.tx"
 				}
 			},
-			"end": "(?=;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))|(?<=\\})",
+			"end": "(?=;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b))|(?<=\\})",
 			"patterns": [
 				{
 					"include": "#function-name"
@@ -1462,7 +1462,7 @@
 							"name": "storage.modifier.async.tx"
 						}
 					},
-					"end": "(?==>|\\{|(^\\s*(export|function|class|interface|let|var|const|import|enum|namespace|module|type|abstract|declare|int|double|string|bool|sym|obj|def|any)\\s+))",
+					"end": "(?==>|\\{|(^\\s*(export|function|class|interface|let|var|const|import|enum|namespace|module|type|abstract|declare|int|double|str|big|bool|sym|obj|def|any)\\s+))",
 					"patterns": [
 						{
 							"include": "#comment"
@@ -1805,7 +1805,7 @@
 				},
 				{
 					"begin": "(?<=:)\\s*",
-					"end": "(?=\\s|[;),}\\]:\\-\\+]|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))",
+					"end": "(?=\\s|[;),}\\]:\\-\\+]|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b))",
 					"patterns": [
 						{
 							"include": "#expression"
@@ -1966,7 +1966,7 @@
 					"name": "storage.type.namespace.tx"
 				}
 			},
-			"end": "(?<=\\})|(?=;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))",
+			"end": "(?<=\\})|(?=;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b))",
 			"patterns": [
 				{
 					"include": "#comment"
@@ -2003,7 +2003,7 @@
 					"name": "entity.name.type.alias.tx"
 				}
 			},
-			"end": "(?=\\}|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))",
+			"end": "(?=\\}|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b))",
 			"patterns": [
 				{
 					"include": "#comment"
@@ -2021,7 +2021,7 @@
 							"name": "keyword.control.intrinsic.tx"
 						}
 					},
-					"end": "(?=\\}|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))",
+					"end": "(?=\\}|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b))",
 					"patterns": [
 						{
 							"include": "#type"
@@ -2035,7 +2035,7 @@
 							"name": "keyword.operator.assignment.tx"
 						}
 					},
-					"end": "(?=\\}|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|int|double|string|bool|sym|obj|def|any)\\b))",
+					"end": "(?=\\}|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|int|double|str|big|bool|sym|obj|def|any)\\b))",
 					"patterns": [
 						{
 							"include": "#type"
@@ -2226,7 +2226,7 @@
 							"name": "keyword.control.default.tx"
 						}
 					},
-					"end": "(?=$|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))",
+					"end": "(?=$|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b))",
 					"patterns": [
 						{
 							"include": "#interface-declaration"
@@ -2238,7 +2238,7 @@
 				},
 				{
 					"name": "meta.export.tx",
-					"begin": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(export)(?:\\s+(type))?\\b(?!(\\$)|(\\s*:))((?=\\s*[\\{*])|((?=\\s*[_$[:alpha:]][_$[:alnum:]]*(\\s|,))(?!\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b)))",
+					"begin": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))(export)(?:\\s+(type))?\\b(?!(\\$)|(\\s*:))((?=\\s*[\\{*])|((?=\\s*[_$[:alpha:]][_$[:alnum:]]*(\\s|,))(?!\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b)))",
 					"beginCaptures": {
 						"1": {
 							"name": "keyword.control.export.tx"
@@ -2247,7 +2247,7 @@
 							"name": "keyword.control.type.tx"
 						}
 					},
-					"end": "(?=$|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|string|bool|sym|obj|def|any)\\b))",
+					"end": "(?=$|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var|int|double|str|big|bool|sym|obj|def|any)\\b))",
 					"patterns": [
 						{
 							"include": "#import-export-declaration"
@@ -3371,7 +3371,7 @@
 					"name": "keyword.operator.expression.typeof.tx"
 				}
 			},
-			"end": "(?=[,);}\\]=>:&|{\\?]|$|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var||int|double|string|bool|sym|obj|def|any)\\b))",
+			"end": "(?=[,);}\\]=>:&|{\\?]|$|;|^\\s*$|(?:^\\s*(?:abstract|async|class|const|declare|enum|export|function|import|interface|let|module|namespace|return|type|var||int|double|str|big|bool|sym|obj|def|any)\\b))",
 			"patterns": [
 				{
 					"include": "#expression"
@@ -3892,7 +3892,7 @@
 					"name": "keyword.operator.type.annotation.tx"
 				}
 			},
-			"end": "(?==>|\\{|(^\\s*(export|function|class|interface|let|var|const|import|enum|namespace|module|type|abstract|declare|int|double|string|bool|sym|obj|def|any)\\s+))",
+			"end": "(?==>|\\{|(^\\s*(export|function|class|interface|let|var|const|import|enum|namespace|module|type|abstract|declare|int|double|str|big|bool|sym|obj|def|any)\\s+))",
 			"patterns": [
 				{
 					"include": "#arrow-return-type-body"
@@ -3906,7 +3906,7 @@
 					"name": "meta.arrow.tx meta.return.type.arrow.tx keyword.operator.type.annotation.tx"
 				}
 			},
-			"end": "(?==>|\\{|(^\\s*(export|function|class|interface|let|var|const|import|enum|namespace|module|type|abstract|declare||int|double|string|bool|sym|obj|def|any)\\s+))",
+			"end": "(?==>|\\{|(^\\s*(export|function|class|interface|let|var|const|import|enum|namespace|module|type|abstract|declare|int|double|str|big|bool|sym|obj|def|any)\\s+))",
 			"contentName": "meta.arrow.tx meta.return.type.arrow.tx",
 			"patterns": [
 				{
